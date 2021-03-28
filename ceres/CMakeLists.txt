@@ -9,7 +9,7 @@ cmake_minimum_required(VERSION 3.4.1)
 # or SHARED, and provides the relative paths to its source code.
 # You can define multiple libraries, and CMake builds them for you.
 # Gradle automatically packages shared libraries with your APK.
-
+include(${CMAKE_SOURCE_DIR}/../flags.cmake)
 #set(EIGEN3_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/eigen-3.3.9)
 ##add_subdirectory(eigen-3.3.9)
 set(MINIGLOG ON)
