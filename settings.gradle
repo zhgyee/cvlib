@@ -1,0 +1,4 @@
+include ':g2o'
+include ':ceres'
+include ':app'
+rootProject.name = "CVLib"
