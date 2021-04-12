@@ -116,12 +116,12 @@ detect_broken_stack_check_macos_xcode_pairing()
 include(AddGerritCommitHook)
 add_gerrit_commit_hook(${Ceres_SOURCE_DIR} ${Ceres_BINARY_DIR})
 
-#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${Ceres_BINARY_DIR}/bin)
-#set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${Ceres_BINARY_DIR}/lib)
-#set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${Ceres_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${Ceres_BINARY_DIR}/bin/${CMAKE_BUILD_TYPE}/${ANDROID_ABI})
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${Ceres_BINARY_DIR}/lib/${CMAKE_BUILD_TYPE}/${ANDROID_ABI})
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${Ceres_BINARY_DIR}/lib/${CMAKE_BUILD_TYPE}/${ANDROID_ABI})
 # Set postfixes for generated libraries based on buildtype.
-set(CMAKE_RELEASE_POSTFIX "")
-set(CMAKE_DEBUG_POSTFIX "-debug")
+#set(CMAKE_RELEASE_POSTFIX "")
+#set(CMAKE_DEBUG_POSTFIX "-debug")
 
 # Read the Ceres version from the source, such that we only ever have a single
 # definition of the Ceres version.
