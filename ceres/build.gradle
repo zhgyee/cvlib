@@ -7,7 +7,7 @@ android {
         versionName "1.0"
         externalNativeBuild {
             cmake {
-                arguments "-DEIGEN3_INCLUDE_DIR=$rootDir/eigen-3.3.9"
+                arguments "-DEIGEN3_INCLUDE_DIR=${eigen_dir}"
                 targets "ceres"
             }
         }

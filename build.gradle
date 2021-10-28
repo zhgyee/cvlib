@@ -11,7 +11,12 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
-
+ext {
+    Properties properties = new Properties();
+    properties.load(project.rootProject.file('local.properties').newDataInputStream());
+    eigen_dir = properties.getProperty('eigen.dir');
+    ceres_dir = properties.getProperty('ceres.dir');
+}
 allprojects {
     repositories {
         google()
