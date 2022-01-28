@@ -10,3 +10,20 @@ else()
     endif()
 endif()
 
+LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
+
+find_package(Eigen3 REQUIRED)
+
+set(OpenCV_DIR "${OPENCV_DIR}/native")
+add_library(OpenCV_LIBS SHARED IMPORTED)
+set_target_properties(OpenCV_LIBS PROPERTIES IMPORTED_LOCATION
+        "${OpenCV_DIR}/libs/${ANDROID_ABI}/libopencv_java4.so"
+        )
+set(OpenCV_INCLUDE_DIRS "${OpenCV_DIR}/jni/include")
+include_directories(${OpenCV_INCLUDE_DIRS})
+
+set(BOOST_INCLUDE_DIR "${BOOST_DIR}/${ANDROID_ABI}/include/boost-1_76")
+include_directories(${BOOST_INCLUDE_DIR})
+add_library(boost_serialization STATIC IMPORTED)
+set_target_properties(boost_serialization PROPERTIES IMPORTED_LOCATION
+        "${BOOST_DIR}/${ANDROID_ABI}/lib/libboost_serialization-clang-mt-a64-1_76.a")

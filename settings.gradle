@@ -1,5 +1,4 @@
-include ':DBoW2'
-include ':g2o'
+include ':liborbslam'
 include ':ceres'
 include ':app'
 rootProject.name = "CVLib"

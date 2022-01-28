@@ -16,6 +16,8 @@ ext {
     properties.load(project.rootProject.file('local.properties').newDataInputStream());
     eigen_dir = properties.getProperty('eigen.dir');
     ceres_dir = properties.getProperty('ceres.dir');
+    opencv_dir = properties.getProperty('opencv.dir');
+    boost_dir = properties.getProperty('boost.dir');
 }
 allprojects {
     repositories {
