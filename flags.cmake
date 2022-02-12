@@ -1,5 +1,6 @@
 
 set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -Wall -fexceptions -frtti ")
+set(CMAKE_C_FLAGS  "${CMAKE_C_FLAGS} -Wall -Werror -Wno-unused-variable ")
 if(CMAKE_BUILD_TYPE MATCHES "Release")
     set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -O3 -fvisibility=hidden -Werror ")
 else()

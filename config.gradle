@@ -23,7 +23,7 @@ class VrAppPlugin implements Plugin<Project> {
           cmake {
             cppFlags.add("-std=c++17")
             def numProcs = Runtime.runtime.availableProcessors()
-            arguments "V=0", "-j$numProcs",  "-DANDROID_STL=c++_shared"
+            arguments "-j$numProcs",  "-DANDROID_STL=c++_shared"
           }
         }
       }
