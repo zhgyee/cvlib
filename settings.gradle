@@ -2,3 +2,4 @@ include ':liborbslam'
 include ':ceres'
 include ':app'
 rootProject.name = "CVLib"
+include ':opencv'

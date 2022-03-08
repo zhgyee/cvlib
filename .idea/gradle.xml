@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/ceres" />
             <option value="$PROJECT_DIR$/liborbslam" />
+            <option value="$PROJECT_DIR$/opencv" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

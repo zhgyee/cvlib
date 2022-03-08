@@ -128,6 +128,8 @@ int g2o_test_main() {
 }
 
 int main() {
+  Eigen::initParallel();
+  Eigen::setNbThreads(4);
   auto start = std::chrono::steady_clock::now();
   g2o_test_main();
   auto end = std::chrono::steady_clock::now();
